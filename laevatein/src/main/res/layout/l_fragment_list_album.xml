@@ -5,4 +5,4 @@
     android:layout_width="@dimen/l_drawerMenuWidth"
     android:layout_height="match_parent"
     android:choiceMode="singleChoice"
-    android:background="@color/l_background_default_drawer"/>
+    android:background="?attr/colorPrimary"/>

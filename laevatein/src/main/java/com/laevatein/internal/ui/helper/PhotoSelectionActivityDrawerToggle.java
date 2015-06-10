@@ -21,6 +21,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.util.Log;
 import android.view.View;
 
 import com.laevatein.R;
@@ -55,6 +56,7 @@ public class PhotoSelectionActivityDrawerToggle extends ActionBarDrawerToggle {
 
     public void setUpActionBar(ActionBar actionBar) {
         if (actionBar == null) {
+            Log.i("Picker","Action bar is null");
             return; // FIXME for now just check null or not to avoid NPE, consider compatibility layer to deal with tool bar later on.
         }
         actionBar.setDisplayHomeAsUpEnabled(true);

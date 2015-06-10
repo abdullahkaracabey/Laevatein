@@ -35,6 +35,7 @@ import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -76,7 +77,12 @@ public class PhotoSelectionActivity extends ActionBarActivity implements
         mCollection.setDefaultSelection(getIntent().<Uri>getParcelableArrayListExtra(EXTRA_RESUME_LIST));
         mDrawer = (DrawerLayout) findViewById(R.id.l_container_drawer);
         mToggle = new PhotoSelectionActivityDrawerToggle(this, mDrawer);
-        mToggle.setUpActionBar(getSupportActionBar());
+
+        Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
+//        mToggle.setUpActionBar(toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mDrawer.setDrawerListener(mToggle);
     }
 

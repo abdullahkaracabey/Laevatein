@@ -19,7 +19,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 
 import com.laevatein.internal.ui.PhotoSelectionActivity;
 
